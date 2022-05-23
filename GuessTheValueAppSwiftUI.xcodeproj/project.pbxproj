@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3336DD2283B80ED001A2EA6 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3336DD1283B80ED001A2EA6 /* SliderView.swift */; };
+		D3336DD6283BCFD3001A2EA6 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3336DD5283BCFD3001A2EA6 /* GameManager.swift */; };
 		D3F33C19283B675700A34853 /* GuessTheValueAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F33C18283B675700A34853 /* GuessTheValueAppSwiftUIApp.swift */; };
 		D3F33C1B283B675700A34853 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F33C1A283B675700A34853 /* ContentView.swift */; };
 		D3F33C1D283B675800A34853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F33C1C283B675800A34853 /* Assets.xcassets */; };
 		D3F33C20283B675800A34853 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F33C1F283B675800A34853 /* Preview Assets.xcassets */; };
+		D3F33C27283B676900A34853 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F33C26283B676900A34853 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3336DD1283B80ED001A2EA6 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		D3336DD5283BCFD3001A2EA6 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		D3F33C15283B675700A34853 /* GuessTheValueAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheValueAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F33C18283B675700A34853 /* GuessTheValueAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheValueAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		D3F33C1A283B675700A34853 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D3F33C1C283B675800A34853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3F33C1F283B675800A34853 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D3F33C26283B676900A34853 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				D3F33C18283B675700A34853 /* GuessTheValueAppSwiftUIApp.swift */,
+				D3F33C26283B676900A34853 /* ButtonView.swift */,
 				D3F33C1A283B675700A34853 /* ContentView.swift */,
+				D3336DD5283BCFD3001A2EA6 /* GameManager.swift */,
+				D3336DD1283B80ED001A2EA6 /* SliderView.swift */,
 				D3F33C1C283B675800A34853 /* Assets.xcassets */,
 				D3F33C1E283B675800A34853 /* Preview Content */,
 			);
@@ -138,7 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3F33C1B283B675700A34853 /* ContentView.swift in Sources */,
+				D3336DD2283B80ED001A2EA6 /* SliderView.swift in Sources */,
 				D3F33C19283B675700A34853 /* GuessTheValueAppSwiftUIApp.swift in Sources */,
+				D3F33C27283B676900A34853 /* ButtonView.swift in Sources */,
+				D3336DD6283BCFD3001A2EA6 /* GameManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

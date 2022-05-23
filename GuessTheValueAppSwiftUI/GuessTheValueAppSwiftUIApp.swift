@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct GuessTheValueAppSwiftUIApp: App {
+    
+    @StateObject private var gameManager = GameManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(GameManager())
         }
     }
 }
