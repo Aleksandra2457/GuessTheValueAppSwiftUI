@@ -12,6 +12,7 @@ struct ContentView: View {
     @EnvironmentObject var gameManager: GameManager
     
     @State private var currentValue: Float = 0.0
+    @State private var alertIsPresented = false
     
     var body: some View {
         VStack(spacing: 20) {
@@ -23,7 +24,12 @@ struct ContentView: View {
                 SliderView(currentSliderValue: $currentValue, guessedValue: gameManager.guessedValue)
                 Text("100")
             }
-            ButtonView(text: "Проверь меня!", action: {})
+            ButtonView(text: "Проверь меня!", action: {
+                alertIsPresented = true
+            })
+            .alert("Your Score: \(gameManager.computeScore(usersValue: currentValue))", isPresented: $alertIsPresented) {
+                Button("OK", role: .cancel) { }
+            }
             ButtonView(text: "Начать заново", action: {
                 currentValue = 0.0
                 gameManager.guessedValue = Int.random(in: 0...100)
@@ -31,12 +37,6 @@ struct ContentView: View {
         }
         .padding()
     }
-    
-    private func computeScore() -> Int {
-        let difference = abs(gameManager.guessedValue - lroundf(currentValue))
-        return 100 - difference
-    }
-    
     
 }
 
