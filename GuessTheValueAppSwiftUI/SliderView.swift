@@ -9,14 +9,14 @@ import SwiftUI
 
 struct SliderView: UIViewRepresentable {
     
+    // MARK: - Property Wrappers
     @EnvironmentObject var gameManager: GameManager
-    
     @Binding var currentSliderValue: Float
     
+    // MARK: - Public Properties
     let guessedValue: Int
     
-    var difference = 0
-    
+    // MARK: - Public Methods
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider()
         slider.minimumValue = 0
@@ -41,6 +41,7 @@ struct SliderView: UIViewRepresentable {
         Coordinator(value: $currentSliderValue)
     }
     
+    // MARK: - Private Methods
     private func convertDifferenceToAlpha(_ value: Int) -> CGFloat {
         
         let difference = gameManager.computeScore(usersValue: currentSliderValue)
@@ -65,10 +66,10 @@ struct SliderView: UIViewRepresentable {
 
 extension SliderView {
     
+    // MARK: - Coordinator Class
     class Coordinator: NSObject {
-        
         @Binding var value: Float
-        
+
         init(value: Binding<Float>) {
             self._value = value
         }
