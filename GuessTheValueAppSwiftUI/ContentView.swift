@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @EnvironmentObject var gameManager: GameManager
     
-    @State private var currentValue: Float = 0.0
+    @State private var currentValue = 0.0
     @State private var alertIsPresented = false
     
     var body: some View {
@@ -21,7 +21,7 @@ struct ContentView: View {
                 .allowsTightening(true)
             HStack {
                 Text("0")
-                SliderView(currentSliderValue: $currentValue, guessedValue: gameManager.guessedValue)
+                SliderView(value: $currentValue, alpha: gameManager.computeScore(usersValue: Double(currentValue)), color: .red)
                 Text("100")
             }
             ButtonView(text: "Проверь меня!", action: {

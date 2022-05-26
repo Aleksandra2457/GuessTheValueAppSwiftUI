@@ -12,8 +12,8 @@ class GameManager: ObservableObject {
 
     @Published var guessedValue = Int.random(in: 0...100) 
     
-    func computeScore(usersValue: Float) -> Int {
-        let difference = abs(guessedValue - lroundf(usersValue))
+    func computeScore(usersValue: Double) -> Int {
+        let difference = abs(guessedValue - lround(usersValue))
         return 100 - difference
     }
     
